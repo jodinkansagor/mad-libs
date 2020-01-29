@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Form from '../components/madlib/Form';
 import Result from '../components/madlib/Result';
 import Header from '../components/common/Header';
+import Footer from '../components/common/Footer';
 
 export default class Madlib extends Component{
   state = {
@@ -23,6 +24,7 @@ export default class Madlib extends Component{
         <Header />
         {!showResult && <Form onSubmit={this.handleSubmit} />}
         {showResult && <Result words={[]} closeResult={this.toggleResult} />}
+        <Footer />
       </>
     );
   }
