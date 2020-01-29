@@ -6,17 +6,35 @@ import Footer from '../components/common/Footer';
 
 export default class Madlib extends Component{
   state = {
-    showResult: false
+    showResult: false,
+    words: [],
+    value0: '',
+    value1: '',
+    value2: '',
+    value3: '',
+    value4: '',
+    value5: '',
+    value6: '',
+    value7: '',
+    value8: '',
+    value9: '',
+    value10: '',
+    value11: '',
   }
 
   toggleResult = () =>
     this.setState(state => ({ ...state, showResult: !state.showResult }));
 
-  handleSubmit = event => {
-    event.preventDefault();
-    this.toggleResult();
+  handleChange = ({ target }) => {
+    this.setState({ ['name']: target.name });
   }
 
+  handleSubmit = event => {
+    event.preventDefault();
+    this.setState({  });
+    this.toggleResult();
+  }
+ 
   render() {
     const { showResult } = this.state;
     return (
