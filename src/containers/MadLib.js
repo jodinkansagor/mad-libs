@@ -31,7 +31,9 @@ export default class Madlib extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.setState({});
+    this.setState(state => ({
+      words: [state.value0, state.value1, state.value2, state.value3, state.value4, state.value5, state.value6, state.value7, state.value8, state.value9, state.value10, state.value11]    
+    }));
     this.toggleResult();
   }
 
@@ -41,7 +43,7 @@ export default class Madlib extends Component {
       <>
         <Header />
         {!showResult && <Form onSubmit={this.handleSubmit} onChange={this.handleChange} />}
-        {showResult && <Result words={[]} closeResult={this.toggleResult} />}
+        {showResult && <Result words={[this.state.words]} closeResult={this.toggleResult} />}
         <Footer />
       </>
     );
