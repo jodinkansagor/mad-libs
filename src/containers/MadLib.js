@@ -43,7 +43,7 @@ export default class Madlib extends Component {
       <>
         <Header />
         {!showResult && <Form onSubmit={this.handleSubmit} onChange={this.handleChange} />}
-        {showResult && <Result words={[this.state.words]} closeResult={this.toggleResult} />}
+        {showResult && <Result words={this.state.words} closeResult={this.toggleResult} />}
         <Footer />
       </>
     );
