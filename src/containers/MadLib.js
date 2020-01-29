@@ -4,7 +4,7 @@ import Result from '../components/madlib/Result';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 
-export default class Madlib extends Component{
+export default class Madlib extends Component {
   state = {
     showResult: false,
     words: [],
@@ -26,21 +26,21 @@ export default class Madlib extends Component{
     this.setState(state => ({ ...state, showResult: !state.showResult }));
 
   handleChange = ({ target }) => {
-    this.setState({ ['name']: target.name });
+    this.setState({ [target.name]: target.value });
   }
 
   handleSubmit = event => {
     event.preventDefault();
-    this.setState({  });
+    this.setState({});
     this.toggleResult();
   }
- 
+
   render() {
     const { showResult } = this.state;
     return (
       <>
         <Header />
-        {!showResult && <Form onSubmit={this.handleSubmit} />}
+        {!showResult && <Form onSubmit={this.handleSubmit} onChange={this.handleChange} />}
         {showResult && <Result words={[]} closeResult={this.toggleResult} />}
         <Footer />
       </>

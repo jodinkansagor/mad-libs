@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Form = ({ onSubmit, value0, value1, value2, value3, value4, value5, value6, value7, value8, value9, value10, value11 }) => (
-  <form onSubmit={onSubmit}>
+const Form = ({ onSubmit, onChange, value0, value1, value2, value3, value4, value5, value6, value7, value8, value9, value10, value11 }) => (
+  <form onSubmit={onSubmit} onChange={onChange}>
     <input type="text" name="value0" value={value0} placeholder="adjective" />
     <input type="text" name="value1" value={value1} placeholder="noun" />
     <input type="text" name="value2" value={value2} placeholder="verb, past tense" />
@@ -21,6 +21,7 @@ const Form = ({ onSubmit, value0, value1, value2, value3, value4, value5, value6
 
 Form.propTypes = {
   onSubmit: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
   value0: PropTypes.string.isRequired,
   value1: PropTypes.string.isRequired,
   value2: PropTypes.string.isRequired,
