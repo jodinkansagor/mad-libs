@@ -15,7 +15,8 @@ const Form = ({ onSubmit, onChange, value0, value1, value2, value3, value4, valu
     <input type="text" name="value9" value={value9} placeholder="adverb" />
     <input type="text" name="value10" value={value10} placeholder="verb, past tense" />
     <input type="text" name="value11" value={value11} placeholder="adjective" />
-    <button>Create Madlib</button>
+    <button type="reset">Clear Form</button>
+    <button type="submit">Create Madlib</button>
   </form>
 );
 
