@@ -1,8 +1,11 @@
 import React from 'react';
+import styles from './Footer.css';
 
 const Footer = () => (
   <>
-    <h3>© 2020 JBJ</h3>
+    <footer>
+      <h3>© 2020 JBJ</h3>
+    </footer>
   </>
 );
 

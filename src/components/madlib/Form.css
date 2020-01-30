@@ -1,0 +1,40 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  input {
+    margin: 5px;
+    border-radius: 2px;
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #333333;
+  }
+
+  input::placeholder {
+    color: #fdc485;
+  }
+
+  button {
+    margin: 2px;
+    background-color: #fdc485;
+    border: 1px solid #333333;
+    border-radius: 2px;
+  }
+
+  button:hover {
+    background-color: #333333;
+    color: #fdc485;
+    cursor: pointer;
+  }
+
+  .group1 {
+    display: flex;
+    flex-direction: column;
+  }
+}
