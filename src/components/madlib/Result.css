@@ -1,0 +1,24 @@
+section {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    max-width: 400px;
+  }
+
+  button {
+    margin: 2px;
+    background-color: #fdc485;
+    border: 1px solid #333333;
+    border-radius: 2px;
+    width: 150px;
+  }
+
+  button:hover {
+    background-color: #333333;
+    color: #fdc485;
+    cursor: pointer;
+  }
+}
